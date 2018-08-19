@@ -85,6 +85,6 @@ The demos contained in this repo already include the transpiled JavaScript, but 
 
 ### JSX
 
-This module does not support JSX, as that would require an additional layer of complexity in the form of a pre-transpile step or perhaps modification/extension of Transcrypt itself since JSX is its own syntax and not Python or JavaScript. However, the React community seems to be pretty divided on JSX anyways. This module just provides a wrapper for **React.createElement** to build tags directly, and this approach is similar to [HyperScript](https://github.com/mlmorg/react-hyperscript) which many React developers seem to prefer over JSX anyways.
+This module does not support JSX, as that would require an additional layer of complexity in the form of a pre-transpile step or perhaps modification/extension of Transcrypt itself since JSX is its own syntax and not Python or JavaScript. However, the React community seems to be pretty divided on JSX anyways. This module just provides a wrapper for **React.createElement** to build tags directly, and this approach is similar to [HyperScript](https://github.com/mlmorg/react-hyperscript) which many React developers seem to prefer over JSX.
 
 If you are interested in using JSX with React and Transcrypt, check out [PyReact](https://github.com/doconix/pyreact/blob/master/src/scripts/pyreact.py). It offers similar functionality to this module, but also allows you to specify JSX (currently as a string) for external processing by an Node.
