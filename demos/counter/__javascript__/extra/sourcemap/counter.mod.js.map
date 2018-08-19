@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "/home/ryli/repos/reactscrypt/demos/counter/__javascript__/counter.mod.js",
+	"sources": [
+		"/home/ryli/repos/reactscrypt/demos/counter/counter.py"
+	],
+	"sourcesContent": [
+		"# this is a port of the demo at https://www.transcrypt.org/examples#react_demo\n# it makes use of the reactscrypt bindings to provide a more Pythonic syntax\n# derived from React's ES6 classes\n\nfrom reactscrypt.react import ReactComponent, ReactElement as e\n\nclass Hello(ReactComponent):\n\n    initial_state = {\n        'counter': 0\n    }\n\n    def render(self):\n        return e('div', {'class': 'maindiv'},\n            e('h1', None, 'Hello ', self.props['name']),\n            e('p', None, 'Lorem ipsum dolor sit ame.'),\n            e('p', None, 'Counter: ', self.state['counter'])\n        )\n\n    def component_did_mount(self):\n        setInterval(self.update_counter, 1000)\n\n    def update_counter(self):\n        # use the updater method form of set_state to avoid race conditions since the next state\n        # of loading_info depends on the previous state.\n        # see https://reactjs.org/docs/react-component.html#setstate \n        self.set_state(lambda prev_state, props : {'counter': prev_state['counter'] + 1})\n\nHello(None).render_to('container', {'name': 'React!'})\n\n"
+	],
+	"mappings": "AAAA;AAAA;AAIA;AAAA;AAEA;AAAA;AAEA;AAIA;AAIA;AAAA;AAGA;AACA;AAAA;AAEA;AAIA;AAAA;AAAA;AAAA;AAAA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

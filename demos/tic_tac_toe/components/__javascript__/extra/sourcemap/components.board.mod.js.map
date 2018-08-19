@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "/home/ryli/repos/reactscrypt/demos/tic_tac_toe/components/__javascript__/components.board.mod.js",
+	"sources": [
+		"/home/ryli/repos/reactscrypt/demos/tic_tac_toe/components/board.py"
+	],
+	"sourcesContent": [
+		"from reactscrypt.react import ReactComponent, ReactElement as e\n\nclass Board(ReactComponent):\n\n    def render(self):\n\n        def render_square(i):\n            value = self.props['squares'][i]\n            return e('button', {'class': 'square', 'onClick': lambda: self.props['onClick'](i)}, value)\n\n        board = e('div')\n\n        for row in range(3):\n            board_row = e('div', {'class': 'board-row'})\n            for col in range(3):\n                index = (row * 3) + col\n                board_row.append(render_square(index))\n            board.append(board_row)\n\n        return board\n"
+	],
+	"mappings": "AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA;AAAA;AAEA;AAEA;AACA;AACA;AAAA;AAAA;AAAA;AAEA;AAEA;AACA;AACA;AACA;AACA;AAAA;AACA;AAAA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

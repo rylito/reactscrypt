@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "/home/ryli/repos/reactscrypt/demos/tic_tac_toe/__javascript__/tic_tac_toe.mod.js",
+	"sources": [
+		"/home/ryli/repos/reactscrypt/demos/tic_tac_toe/tic_tac_toe.py"
+	],
+	"sourcesContent": [
+		"from components.game import Game\n\nGame(None).render_to('root')\n"
+	],
+	"mappings": "AAAA;AAAA;AAAA;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}
